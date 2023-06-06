@@ -1,0 +1,75 @@
+/* * f2cc8f - yellow * 81b29a - green * e07a5f - orange/red * 3d405b - blueish * f4f1de - whitish*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&family=Merriweather:wght@400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Merriweather", serif;
+  font-family: "Merriweather Sans", sans-serif;
+  background-color: #f2cc8f;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.section-about,
+.section-how-it-works,
+.section-results {
+  margin-bottom: 100px;
+}
+nav {
+  background-color: #f2cc8f;
+}
+img {
+  max-width: 100%;
+}
+@media (min-width: 84em) {
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+  .heading-secondary {
+    font-size: 4rem;
+  }
+  .hero-description {
+    font-size: 2rem;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+  .hero-text-box {
+    flex-basis: 600px;
+    margin-right: 200px;
+  }
+  .hero-img-box {
+    flex-basis: 350px;
+  }
+  button {
+    padding: 10px 20px;
+  }
+  /* SECTIONS */
+  .tertairy-heading {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  /* ABOUT US SECTION */
+  /* ABOUT US SECTION */
+  /* ABOUT US SECTION */
+  /* DIET US SECTION */
+  .h4-heading {
+    font-size: 2rem;
+  }
+  .diet-dishes-container {
+    display: flex;
+    gap: 160px;
+    padding-block: 70px;
+  }
+}
