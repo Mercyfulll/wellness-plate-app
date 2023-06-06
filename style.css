@@ -1,0 +1,13 @@
+.results-container{
+    max-width: 320px;
+    background-color:#f2cc8f ;
+    color:#f4f1de;
+    padding: 2%;
+}
+.results-container h2{
+    color: #3d405b;
+}
+
+.condition{
+    color: #e07a5f;
+}
