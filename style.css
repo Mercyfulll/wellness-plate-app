@@ -44,7 +44,8 @@ html {
 }
 .section-about,
 .section-how-it-works,
-.section-results {
+.section-results,
+.form {
   margin-bottom: 35px;
   
 }
@@ -71,11 +72,15 @@ html {
 }
 .btn-hero {
   background-color: #81b29a;
-  border: none;
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
   padding-block: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 @media (min-width: 84em) {
@@ -122,18 +127,30 @@ html {
   .section-about,
   .section-how-it-works,
   .section-results,
-  .section-diet{
+  .section-diet,
+  .form{
     border-radius: 25px;
     padding: 5em;
   }
+  .section-results,
   .section-about{
     background-color:#e07a5f  
   }
+  .form,
   .section-how-it-works{
     background-color: #f4f1de ;
   }
-  .section-results{
-    background-color: #e07a5f;
+  .form{
+    text-align: center;
+  }
+  label{
+    font-size: large;
+    
+  }
+  input{
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
   }
   .section-diet{
     background-color: #81b29a ;
