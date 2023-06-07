@@ -1,65 +1,65 @@
 .container2s {
-    width: 85%;
-    background-color: #f2cc8f;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6em;
-    padding: 0.5em;
-    padding-bottom: 2em;
-    border-radius: 25px;
+  width: 85%;
+  background-color: #f2cc8f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6em;
+  padding: 0.5em;
+  padding-bottom: 2em;
+  border-radius: 25px;
 }
-.container1{
-    width: 85%;
-    background-color: #f2cc8f;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.3em;
-    padding: 0.5em;
-    padding-bottom: 1em;
-    border-radius: 25px;
+.container1 {
+  width: 85%;
+  background-color: #f2cc8f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3em;
+  padding: 0.5em;
+  padding-bottom: 1em;
+  border-radius: 25px;
 }
-.numbering{
-    padding-bottom: 0.5em;
-    padding-top: 1em;
-    text-align: center;
+.numbering {
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+  text-align: center;
 }
-.questions{
-    padding-bottom: 2em;
-    text-align: center;
+.questions {
+  padding-bottom: 2em;
+  text-align: center;
 }
 
-h3{
-    text-align: center;
-}
-a{
-    border-radius: 20px;
-    margin: 0.3em;
-    background-color:#81b29a;
-    text-decoration: none;
-    padding: 0.3em;
-}
-.next{
-    text-align: center;
-}
-button{
-    padding-left: 3em;
-    padding-right: 3em;
+/* h3 {
+  text-align: center;
+} */
 
+a {
+  border-radius: 20px;
+  margin: 0.3em;
+  background-color: #81b29a;
+  text-decoration: none;
+  padding: 0.3em;
 }
-.TC{
-    border: solid 1px;
-    background-color: #f4f1de ;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    padding: 0.7em;
+.next {
+  text-align: center;
 }
-.accept{
-    padding-left: 1em;
-    padding-top: 0.7em;
+button {
+  padding-left: 3em;
+  padding-right: 3em;
 }
-.QR{
-    text-align: center;
+.TC {
+  border: solid 1px;
+  background-color: #f4f1de;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  padding: 0.7em;
+}
+.accept {
+  padding-left: 1em;
+  padding-top: 0.7em;
+}
+.QR {
+  text-align: center;
 }
 /* * f2cc8f - yellow * 81b29a - green * e07a5f - orange/red * 3d405b - blueish * f4f1de - whitish*/
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
@@ -69,7 +69,7 @@ button{
   padding: 0;
   box-sizing: border-box;
 }
-body {
+main {
   font-family: "Merriweather", serif;
   font-family: "Merriweather Sans", sans-serif;
   background-color: #f2cc8f;
@@ -77,22 +77,67 @@ body {
 html {
   font-size: 62.5%;
 }
+.hero-description {
+  font-size: 2rem;
+}
+.heading-primary {
+  font-size: 3rem;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+}
+.heading-tertiary {
+  font-size: 2.8rem;
+}
+.h4-heading {
+  font-size: 2.2rem;
+}
+.paragraphs {
+  font-size: 1.8rem;
+}
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  padding-inline: 20px;
 }
 .section-about,
 .section-how-it-works,
 .section-results {
-  margin-bottom: 100px;
+  margin-bottom: 35px;
 }
-nav {
+.navigation {
   background-color: #f2cc8f;
+  background-color: #81b29a;
+  padding: 20px;
 }
-img {
+.hero-image,
+.diet-images {
   max-width: 100%;
 }
+
+.diet-dishes-container {
+  padding-bottom: 40px;
+}
+.popular-diets,
+.h4-heading {
+  margin-bottom: 12px;
+}
+
+.diet-dishes {
+  margin-top: 35px;
+}
+.btn-hero {
+  background-color: #81b29a;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-block: 15px;
+}
 @media (min-width: 84em) {
+  .section-hero {
+    margin-bottom: 35px;
+  }
   .heading-primary {
     font-size: 2.4rem;
   }
@@ -107,14 +152,10 @@ img {
     align-items: center;
   }
   .hero-text-box {
-    flex-basis: 600px;
     margin-right: 200px;
   }
-  .hero-img-box {
-    flex-basis: 350px;
-  }
-  button {
-    padding: 10px 20px;
+  .btn-hero {
+    padding: 10px;
   }
   /* SECTIONS */
   .tertairy-heading {
@@ -123,16 +164,15 @@ img {
   p {
     font-size: 1.8rem;
   }
-  /* ABOUT US SECTION */
-  /* ABOUT US SECTION */
-  /* ABOUT US SECTION */
-  /* DIET US SECTION */
   .h4-heading {
     font-size: 2rem;
   }
   .diet-dishes-container {
     display: flex;
     gap: 160px;
-    padding-block: 70px;
+    padding-block: 35px;
+  }
+  .diet-dishes {
+    margin-top: revert;
   }
 }
