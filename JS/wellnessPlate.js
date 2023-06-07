@@ -20,8 +20,18 @@ var test = {
 ]
 }
 
+function validateName(name){
+    const regex = /^[a-zA-Z ]+$/;
+    if(typeof name === 'string' && name.trim() !== "" && regex.test(name.trim())) {
+        return name.toLowerCase();
+    }
+    else {
+        return "";
+    }
+}
 
 return{
-
+validateName
 }
+
 }
