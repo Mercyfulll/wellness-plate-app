@@ -1,4 +1,4 @@
-.container2s {
+.container2 {
     width: 85%;
     background-color: #f2cc8f;
     margin-left: auto;
@@ -80,6 +80,7 @@ html {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  
 }
 .section-about,
 .section-how-it-works,
