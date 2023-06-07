@@ -19,19 +19,41 @@ var test = {
         "q15"
 ]
 }
+var hasTestInitialized = false;
 
 function validateName(name){
     const regex = /^[a-zA-Z ]+$/;
     if(typeof name === 'string' && name.trim() !== "" && regex.test(name.trim())) {
         return name.toLowerCase();
     }
+
     else {
         return "";
     }
 }
+function validateEmail(email) {
+    if (typeof email !== 'string' || email.trim() === '') {
+      return false;
+    }
+    //only did poin 1
+}
+
+function initializeTest(){
+    hasTestInitialized = true;
+}
+
+    function totalScore(){
+
+    }
+
 
 return{
-validateName
+validateName,
+validateEmail,
+initializeTest,
+totalScore,
+
+
 }
 
 }

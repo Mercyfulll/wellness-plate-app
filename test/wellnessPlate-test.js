@@ -25,8 +25,9 @@ describe('The WellnessPlate function', function(){
 
     it('should check that the QR code has valid information to identify the test', function(){
         var wellnessP = wellnessPlate();
-
         /*How do you write a code for QR codes?*/
+
+
     })
     
 
@@ -40,7 +41,7 @@ describe('The WellnessPlate function', function(){
         it('should initialize the mental health test', function(){
             var wellnessP = wellnessPlate();
             /* The test initializes after the terms and conditions button is clicked, so this is dom related. 
-            this function is just a variable being true? */
+            this function is just a variable being true?*/
         })
     
          it('should record User answers  correctly ', function(){
@@ -49,6 +50,8 @@ describe('The WellnessPlate function', function(){
     
          it('should calculate the user score  correctly', function(){
             var wellnessP = wellnessPlate();
+            /*The user score 45 in total and each question has 3 possible answers. a = 3 , b = 2, c = 1*/
+            
         })
          it('should assign a user to a category based on the score', function(){
             var wellnessP = wellnessPlate();
