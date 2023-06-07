@@ -1,13 +1,3 @@
-const takeButton = document.querySelector(".btn-hero");
-
-
-// Take button should redirect User to a disclaimer screen with QR code 
-
-
-takeButton.addEventListener("click",function(){
-
-})
-
 function onScanSuccess(decodedText, decodedResult) {
     // Handle on success condition with the decoded text or result.
     // console.log(`Scan result: ${decodedText}`, decodedResult);

@@ -1,10 +1,7 @@
 function wellnessPlate(){
 var test = {
    
-    questions:[
-
-],
-qrCode: ;
+    questions:[] 
 }
 
 function radarScore() {
@@ -13,7 +10,15 @@ function radarScore() {
     console.log(`Your score: ${test.score}`);
     console.log(`Category: ${category}`);
   }
-return{
+  function validateTexts(name,email){
+    if (name){
+    return typeof name === 'string' && name.trim() !== '' &&  name.toLowerCase()
+    }
+    if(email){
 
+    }
+  }
+return{
+  validateTexts,
 }
 }
