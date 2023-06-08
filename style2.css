@@ -64,9 +64,7 @@ button {
   padding-top: 0.7em;
 }
 .QR {
-  padding-left: 5em;
   padding: 1em;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,4 +72,9 @@ button {
 
 input{
   margin: 0.5em;
+}
+.result{
+  text-align: center;
+  font-size: xx-large;
+  color: #f4f1de ;
 }
