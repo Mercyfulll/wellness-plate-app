@@ -34,3 +34,9 @@ function onScanSuccess(decodedText) {
     
 
 }
+var msg = "Please accept the T & C's" 
+setTimeout(function(){
+   var msg = ""
+   error.innerHTML = msg
+   msg.parentNode
+},2500)
