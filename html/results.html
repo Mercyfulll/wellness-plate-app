@@ -5,14 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style-Lo.css" />
-    <script src="wellnessPlate.js"></script>
-    <script src="wellnessPlate-dom.js" defer></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"
-      integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="/JS/wellnessPlate.js"></script>
+    <script src="/JS/wellnessPlate-dom3.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Wellness-Plate-App</title>
   </head>
 
@@ -23,26 +18,12 @@
       </div>
     </nav>
     <div class="result-container">
-        <h2>Your results indicate that you are <span class="condition">...</span></h2>
-        <div class="qr-code-results">
-            <div style="width: 450px" id="reader"></div>
-            </div>
+        <h2>Your test score is :</h2><span class="points"></span>
             <div class="explainer">
-                <h6>Please indicate any dietary restrictions and scan the QR code to get a personalized diet and tips on maintaining your mental wellbeing.</h6>
+              <div class="qr-code-display"></div>
+                <span class="msg"></span>
             </div>
-            <div class="diet-options">
-                <input type="radio" id="plant-based" name="diet-type" value="plant-based" checked>
-                <label for="plant-based">Plant-Based</label>
-                <input type="radio" id="pescatarian" name="diet-type" value="pescatarian">
-                <label for="pescatarian">Pescatarian</label>
-                <input type="radio" id="no-restrictions" name="diet-type" value="no-restrictions">
-                <label for="no-restrictions">No Restrictions</label>
-        </div>
-       
         </div>
     </div>
-    
-
-    <script src="../JS/wellnessPlate-dom3.js" charset="utf-8"></script>
   </body>
 </html>

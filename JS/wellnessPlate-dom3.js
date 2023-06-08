@@ -1,32 +1,40 @@
-const checkbox = document.querySelector(".check")
-// Create a new scanner instance out of the construtor object found on the imported library referenced in the script tag
-// Specify the Id where you want the scanner to appear "reader" as 1t arguement
-// 2nd argument is an object where you specify how you wnt "reader" to appear 
-// To use scanner call the render method on instance created inside make reference to a function
-// Create and define a function that will execute when QR code is scanned
-// Select element in the div to display 
-// Have a success title display 
-// Interplate content as result
-// On successful scanning end the scanning by removing the instance
-// Remove reader element for the DOM
+const scoreDisplay = document.querySelector(".points")
+const message = document.querySelector(".msg")
+let scoreInput = JSON.parse(localStorage.getItem("Scoring")) || 0;
 
-var scanner = new Html5QrcodeScanner("reader", { 
-    fps: 20, 
-    qrbox:{
-        width: 250,
-        height: 250, 
-    } 
-});
+const wellnessP = wellnessPlate(scoreInput)
 
-scanner.render(onScanSuccess);
+scoreDisplay.innerHTML = localStorage.getItem("Scoring") || 0
+var score = localStorage.getItem("Scoring")
+message.innerHTML = wellnessP.stressRadar(localStorage.getItem("Scoring"))
 
-function onScanSuccess(decodedText) {
-        document.querySelector(".result").innerHTML = `
-        <h2>Success</h2>
-        <p><a href="${decodedText}">${decodedText}</a></p>
-        `
-        
-        scanner.clear()
-        document.querySelector("reader").remove()
 
+if (score >= 1 && score <= 10) {
+  var img = document.createElement("img");
+  img.src = "../pdf/lsl.png";
+  img.setAttribute("style", "width: 150px;")
+
+  var div = document.querySelector(".qr-code-display");
+  div.appendChild(img);
+  //block.setAttribute("style", "text-align:center");
+
+  //lsl
+} else if (score >= 11 && score <= 20) {
+  var img = document.createElement("img");
+  img.src = "../pdf/msl.png";
+  img.setAttribute("style", "width: 150px;")
+
+
+  var div = document.querySelector(".qr-code-display");
+  div.appendChild(img);
+  //msl
+} else if (score >= 21 && score <= 30) {
+  var img = document.createElement("img");
+  img.src = "../pdf/hsl.png";
+  img.setAttribute("style", "width: 150px;");
+
+
+  var div = document.querySelector(".qr-code-display");
+  div.appendChild(img);
+  //hsl
 }

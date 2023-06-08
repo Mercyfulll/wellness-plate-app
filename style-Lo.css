@@ -21,14 +21,7 @@
   border-radius: 10px;
   margin: 0 auto;
   text-align: center;
-}
-
-.result-container h2,
-h6,
-.diet-options {
-  color: #3d405b;
-  font-size: 24px;
-  margin-bottom: 10px;
+  padding-bottom: 3em;
 }
 
 .condition {
@@ -38,10 +31,28 @@ h6,
 
 .qr-code-results {
   display: block;
-  width: 100%;
   height: auto;
   margin-top: 20px;
   border-radius: 8px;
+}
+.qr-code-display{
+  height: 200px;
+  background-color: #e07a5f;
+  margin: 2em;
+  padding: 1.5em;
+  border-radius: 15px;
+}
+.msg{
+  padding-top: 7em;
+  font-weight: 600;
+  font-size: large;
+  
+}
+.points{
+  font-size: large;
+  font-size: xx-large;
+  font-weight: 600;
+  
 }
 
 @media (min-width: 576px) {

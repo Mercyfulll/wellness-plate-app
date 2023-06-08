@@ -1,76 +1,36 @@
-function wellnessPlate(){
-   
-  var test = {
-   
-    questions:[] 
-}
+function wellnessPlate(scoreInput){
+  let score = scoreInput || 0
 
-  function initializeTest() {
-    hasTestInitialized = true;
-  }
-  function errorMsg() {
-    /* HANDLING INVALID INPUTS */
-    if (!validName && !validEmail) {
-      return "please enter a valid username and a valid email";
-    } else if (!validEmail) {
-      return "please enter a valid email";
-    } else if (!validName) {
-      return "please enter a username";
-    }
-  }
-  function initializeTest() {
-    return (hasTestInitialized = true);
-  }
-
-  function getUserAnswer(selectedAnswer) {
-    if (selectedAnswer === test.answers[0].a) {
-      return "a";
-    } else if (selectedAnswer === test.answers[0].b) {
-      return "b";
-    } else if (selectedAnswer === test.answers[0].c) {
-      return "c";
+  function stressRadar(score) {
+    if (score >= 1 && score <= 10) {
+      return "Your stress result indicates that you have  Low Stress Levels. Please scan the QR code to receive a Mental Wellness Nutrition Brochure(The Ketogenic Diet) with detailed steps on how to maintain mental health.";
+      //lsl
+    } else if (score >= 11 && score <= 20) {
+      return "Your stress result indicates that you have Moderate Stress Levels. Please scan the QR code to receive a Mental Wellness Nutrition Brochure(The Anti Inflammatory Diet) with detailed steps on how to  maintain mental health.";
+      //msl
+    } else if (score >= 21 && score <= 30) {
+      return "Your stress result indicates that you have High Stress Levels. Please seek medical counsel and if you are overwhelmed please utilize the SA Suicide Crisis Line : 0800 567 567. Scan the QR code to receive a Mental Wellness Nutrition Brochure(The DASH Diet) with detailed steps on how to maintain mental health.";
+      //hsl
     }
   }
 
-  function getTotalScore(test, userAnswers) {
-    if (test.questions.length === userAnswers.length) {
-      let score = 0;
-      for (let i = 0; i < test.questions.length; i++) {
-        const answer = userAnswers[i];
-        if (answer === "a") {
-          score += test.answers[0].a;
-        } else if (answer === "b") {
-          score += test.answers[0].b;
-        } else if (answer === "c") {
-          score += test.answers[0].c;
-        }
-      }
-      return score;
+function points(scoreinput) {
+    if (scoreinput === 1) {
+      score += 1;
+    }
+    if (scoreinput === 2) {
+      score += 2;
+    }
+    if (scoreinput === 3) {
+      score += 3;
     }
   }
-  
-  return{
-  validateTexts,
+  function getPoints() {
+    return score;
   }
-
-  function testErrorMessages() {}
-  function totalScore() {}
-  function generalErrorMessages() {}
-
   return {
     stressRadar,
-    getTotalScore,
-    getUserAnswer,
-    errorMsg,
-    validateName,
-    validateEmail,
-    initializeTest,
-    totalScore,
-    testErrorMessages,
-    generalErrorMessages,
-    // validateTexts,
     points,
     getPoints,
-    // radarScore,
   };
 }
