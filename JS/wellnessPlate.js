@@ -1,6 +1,7 @@
-function wellnessPlate() {
+function wellnessPlate(scoreInput) {
   let validName, validEmail;
   var theQRCode = "#";
+  let score = scoreInput || 0;
   var test = {
     questions: [
       "q1",
@@ -97,6 +98,20 @@ function wellnessPlate() {
       return "You have high stress levels, please seek medical advise before undertaking the diet.";
     }
   }
+  function points(scoreinput) {
+    if (scoreinput === 1) {
+      score += 1;
+    }
+    if (scoreinput === 2) {
+      score += 2;
+    }
+    if (scoreinput === 3) {
+      score += 3;
+    }
+  }
+  function getPoints() {
+    return score;
+  }
 
   function testErrorMessages() {}
   function totalScore() {}
@@ -113,5 +128,9 @@ function wellnessPlate() {
     totalScore,
     testErrorMessages,
     generalErrorMessages,
+    // validateTexts,
+    points,
+    getPoints,
+    // radarScore,
   };
 }

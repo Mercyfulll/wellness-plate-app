@@ -84,7 +84,6 @@ html {
 
 a {
   text-decoration: none;
-  color: whitesmoke;
 }
 
 @media (min-width: 84em) {
@@ -151,9 +150,7 @@ a {
     padding-top: 15px;
     font-size: 1.8rem;
   }
-  .form {
-    text-align: center;
-  }
+
   label {
     font-size: large;
   }

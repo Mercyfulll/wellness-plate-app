@@ -170,4 +170,13 @@ describe("The Error messages", function () {
   it('should give the error "Please rescan the QR Code" when a user fails to scan the QR code correctly', function () {
     var wellnessP = wellnessPlate();
   });
+
+  describe("The points function", function () {
+    it("It should add points to get total scoring", function () {
+      let wellnessP = wellnessPlate();
+      wellnessP.points(3);
+      wellnessP.points(1);
+      assert.equal(4, wellnessP.getPoints());
+    });
+  });
 });
