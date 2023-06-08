@@ -24,7 +24,6 @@ if (score >= 1 && score <= 10) {
   img.src = "../pdf/msl.png";
   img.setAttribute("style", "width: 150px;")
 
-
   var div = document.querySelector(".qr-code-display");
   div.appendChild(img);
   //msl
