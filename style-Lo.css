@@ -54,6 +54,43 @@ h6,
   .result-container {
     max-width: 640px;
   }
+  .qr-code-results {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .result-container h2,
+  h6,
+  .diet-options {
+    color: #3d405b;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .result-container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .result-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 576px) {
+  .result-container {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .result-container {
+    max-width: 640px;
+  }
 }
 
 @media (min-width: 992px) {
