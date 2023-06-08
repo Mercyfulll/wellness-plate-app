@@ -1,12 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navigation {
+  background-color: #f2cc8f;
+  background-color: #81b29a;
+  padding: 20px;
+}
 .container2 {
-    width: 85%;
-    background-color: #f2cc8f;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3em;
-    padding: 0.5em;
-    padding-bottom: 2em;
-    border-radius: 25px;
+  width: 85%;
+  background-color: #f2cc8f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  padding: 0.5em;
+  padding-bottom: 2em;
+  border-radius: 25px;
 }
 .container1 {
   width: 85%;
@@ -33,9 +43,9 @@
 h3 {
   text-align: center;
   padding: 1em;
-} 
+}
 
-.num{
+.num {
   border-radius: 20px;
   margin: 0.3em;
   background-color: #81b29a;
@@ -46,7 +56,6 @@ h3 {
   text-align: center;
 }
 button {
-
   padding: 0.4em 3em;
 }
 .TC {
@@ -73,11 +82,11 @@ button {
   justify-content: center;
 }
 
-input{
+input {
   margin: 0.5em;
 }
-.result{
+.result {
   text-align: center;
   font-size: xx-large;
-  color: #f4f1de ;
+  color: #f4f1de;
 }

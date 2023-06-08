@@ -1,42 +1,76 @@
 function wellnessPlate(){
-   let score = 0
-    var test = {
-      questions:[] 
+   
+  var test = {
+   
+    questions:[] 
+}
+
+  function initializeTest() {
+    hasTestInitialized = true;
+  }
+  function errorMsg() {
+    /* HANDLING INVALID INPUTS */
+    if (!validName && !validEmail) {
+      return "please enter a valid username and a valid email";
+    } else if (!validEmail) {
+      return "please enter a valid email";
+    } else if (!validName) {
+      return "please enter a username";
+    }
+  }
+  function initializeTest() {
+    return (hasTestInitialized = true);
+  }
+
+  function getUserAnswer(selectedAnswer) {
+    if (selectedAnswer === test.answers[0].a) {
+      return "a";
+    } else if (selectedAnswer === test.answers[0].b) {
+      return "b";
+    } else if (selectedAnswer === test.answers[0].c) {
+      return "c";
+    }
+  }
+
+  function getTotalScore(test, userAnswers) {
+    if (test.questions.length === userAnswers.length) {
+      let score = 0;
+      for (let i = 0; i < test.questions.length; i++) {
+        const answer = userAnswers[i];
+        if (answer === "a") {
+          score += test.answers[0].a;
+        } else if (answer === "b") {
+          score += test.answers[0].b;
+        } else if (answer === "c") {
+          score += test.answers[0].c;
+        }
       }
+      return score;
+    }
+  }
+  
+  return{
+  validateTexts,
+  }
 
-function radarScore() {
-    const categoryIndex = Math.floor(test.score / 5);
-    const category = test.categories[categoryIndex];
-    console.log(`Your score: ${test.score}`);
-    console.log(`Category: ${category}`);
-  }
-  function validateTexts(name,email){
-    if (name !== ''){
-    return typeof name === 'string' && name.trim() !== '' &&  name.toLowerCase()
-    }
-    if(email !== ''){
-      return email 
-    }
-  }
-  function points(score){
-    if(score === 1){
-      score += 1
-    }
-    if(score === 2){
-      score += 2
-    }
-    if(score === 3){
-      score += 3
-    }
-  }
-  function getPoints(){
-    return score
-  }
-    return{
-     validateTexts,
-     points,
-     getPoints,
-     radarScore,
+  function testErrorMessages() {}
+  function totalScore() {}
+  function generalErrorMessages() {}
 
-  }
+  return {
+    stressRadar,
+    getTotalScore,
+    getUserAnswer,
+    errorMsg,
+    validateName,
+    validateEmail,
+    initializeTest,
+    totalScore,
+    testErrorMessages,
+    generalErrorMessages,
+    // validateTexts,
+    points,
+    getPoints,
+    // radarScore,
+  };
 }

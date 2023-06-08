@@ -1,77 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style-Lo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style-Lo.css" />
     <script src="wellnessPlate.js"></script>
     <script src="wellnessPlate-dom.js" defer></script>
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"
+      integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Wellness-Plate-App</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <nav class="navigation">
+      <div>
+        <h1 class="heading-primary container">Wellness Plate</h1>
+      </div>
+    </nav>
     <div class="result-container">
         <h2>Your results indicate that you are <span class="condition">...</span></h2>
-        <video class="qr-code-results" id="reader"></video>
-        <div class="scan-button-container">
-            <button id="scanButton">Click to Start Scan</button>
+        <div class="qr-code-results">
+            <div style="width: 450px" id="reader"></div>
+            </div>
+            <div class="explainer">
+                <h6>Please indicate any dietary restrictions and scan the QR code to get a personalized diet and tips on maintaining your mental wellbeing.</h6>
+            </div>
+            <div class="diet-options">
+                <input type="radio" id="plant-based" name="diet-type" value="plant-based" checked>
+                <label for="plant-based">Plant-Based</label>
+                <input type="radio" id="pescatarian" name="diet-type" value="pescatarian">
+                <label for="pescatarian">Pescatarian</label>
+                <input type="radio" id="no-restrictions" name="diet-type" value="no-restrictions">
+                <label for="no-restrictions">No Restrictions</label>
         </div>
-        <div class="explainer">
-            <h6>Please indicate any dietary restrictions and scan the QR code to get a personalized diet and tips on maintaining your mental wellbeing.</h6>
-        </div>
-        <div class="diet-options">
-            <label for="plant-based">Plant-Based</label>
-            <input type="radio" id="plant-based" name="diet-type" value="plant-based" checked>
-    
-            <label for="pescatarian">Pescatarian</label>
-            <input type="radio" id="pescatarian" name="diet-type" value="pescatarian">
-    
-            <label for="no-restrictions">No Restrictions</label>
-            <input type="radio" id="no-restrictions" name="diet-type" value="no-restrictions">
-        </div>
+       
         </div>
     </div>
-    <script>
-        const video = document.querySelector('.qr-code-results');
-        const scanButton = document.querySelector('#scanButton');
-
-        function onScanSuccess(decodedText, decodedResult) {
-            console.log(decodedText);
-            console.log(decodedResult);
-        }
-
-        const scanner = new Instascan.Scanner({ video: video });
-        let scanning = false;
-
-        scanButton.addEventListener('click', function () {
-            if (scanning) {
-                scanner.stop();
-                scanButton.innerText = 'Click to Start Scan';
-                scanning = false;
-            } else {
-                Instascan.Camera.getCameras().then(function (cameras) {
-                    if (cameras.length > 0) {
-                        scanner.start(cameras[0]);
-                        scanButton.innerText = 'Scanning... Click to Stop';
-                        scanning = true;
-                    } else {
-                        console.error('No cameras found.');
-                    }
-                }).catch(function (error) {
-                    console.error(error);
-                });
-            }
-        });
-
-        scanner.addListener('scan', function (content) {
-            onScanSuccess(content, null);
-        });
-    </script>
-
     
-</body>
 
+    <script src="../JS/wellnessPlate-dom3.js" charset="utf-8"></script>
+  </body>
 </html>

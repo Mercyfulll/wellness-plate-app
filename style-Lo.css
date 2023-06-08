@@ -1,54 +1,106 @@
+/* STYLE ADDED FOR NAVBAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navigation {
+  background-color: #f2cc8f;
+  background-color: #81b29a;
+  padding: 20px;
+}
+.logo-img {
+  width: 60px;
+}
+
 .result-container {
-    max-width: 320px;
-    background-color: #f2cc8f;
-    color: #3d405b;
-    padding: 2%;
-    border-radius: 10px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 320px;
+  background-color: #f2cc8f;
+  color: #3d405b;
+  padding: 2%;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.result-container h2,
+h6,
+.diet-options {
+  color: #3d405b;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.condition {
+  color: #e07a5f;
+  font-weight: bold;
+}
+
+.qr-code-results {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+@media (min-width: 576px) {
+  .result-container {
+    max-width: 480px;
   }
-  
-  .result-container h2, h6 , .diet-options{
+}
+
+@media (min-width: 768px) {
+  .result-container {
+    max-width: 640px;
+  }
+  .qr-code-results {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .result-container h2,
+  h6,
+  .diet-options {
     color: #3d405b;
     font-size: 24px;
     margin-bottom: 10px;
   }
-  
-  .condition {
-    color: #e07a5f;
-    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .result-container {
+    max-width: 800px;
   }
-  
-  .qr-code-results {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
-    
+}
+
+@media (min-width: 1200px) {
+  .result-container {
+    max-width: 960px;
   }
-  
-  @media (min-width: 576px) {
-    .result-container {
-      max-width: 480px;
-    }
+}
+
+@media (min-width: 576px) {
+  .result-container {
+    max-width: 480px;
   }
-  
-  @media (min-width: 768px) {
-    .result-container {
-      max-width: 640px;
-    }
+}
+
+@media (min-width: 768px) {
+  .result-container {
+    max-width: 640px;
   }
-  
-  @media (min-width: 992px) {
-    .result-container {
-      max-width: 800px;
-    }
+}
+
+@media (min-width: 992px) {
+  .result-container {
+    max-width: 800px;
   }
-  
-  @media (min-width: 1200px) {
-    .result-container {
-      max-width: 960px;
-    }
+}
+
+@media (min-width: 1200px) {
+  .result-container {
+    max-width: 960px;
   }
-  
+}

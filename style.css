@@ -11,19 +11,11 @@ main {
   font-family: "Merriweather Sans", sans-serif;
   background-color: #f2cc8f;
   padding-bottom: 2em;
-  font-size: 62.5%;
 }
 html {
   font-size: 62.5%;
 }
-.hero-description {
-  font-size: 2rem;
-}
-.heading-primary {
-  font-size: 3em;
-  text-transform: uppercase;
-  color:whitesmoke;
-}
+/* ----- FONT-SIZE ----- */
 .heading-secondary {
   font-size: 4.4rem;
 }
@@ -33,10 +25,22 @@ html {
 .h4-heading {
   font-size: 2.2rem;
 }
+.h5-heading {
+  font-size: 2rem;
+}
+.h6-heading {
+  font-size: 1.8rem;
+}
 .paragraphs {
   font-size: 1.8rem;
- 
 }
+.hero-description {
+  font-size: 2rem;
+}
+.heading-primary {
+  font-size: 3em;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -47,14 +51,12 @@ html {
 .section-results,
 .form {
   margin-bottom: 35px;
-  
 }
 .navigation {
-  background-color: #f2cc8f;
   background-color: #81b29a;
   padding: 20px;
 }
-.hero-image,
+.hero-img,
 .diet-images {
   max-width: 100%;
 }
@@ -66,7 +68,9 @@ html {
 .h4-heading {
   margin-bottom: 12px;
 }
-
+.error-text.h4-heading {
+  color: red;
+}
 .diet-dishes {
   margin-top: 35px;
 }
@@ -78,9 +82,8 @@ html {
   padding-block: 15px;
 }
 
-a{
+a {
   text-decoration: none;
-  color: whitesmoke;
 }
 
 @media (min-width: 84em) {
@@ -102,6 +105,9 @@ a{
   }
   .hero-text-box {
     margin-right: 200px;
+  }
+  .hero-img {
+    max-width: revert;
   }
   .btn-hero {
     padding: 10px;
@@ -128,31 +134,32 @@ a{
   .section-how-it-works,
   .section-results,
   .section-diet,
-  .form{
+  .form {
     border-radius: 25px;
     padding: 5em;
   }
   .section-results,
-  .section-about{
-    background-color:#e07a5f  
+  .section-about {
+    background-color: #e07a5f;
   }
   .form,
-  .section-how-it-works{
-    background-color: #f4f1de ;
+  .section-how-it-works {
+    background-color: #f4f1de;
   }
-  .form{
-    text-align: center;
+  ul {
+    padding-top: 15px;
+    font-size: 1.8rem;
   }
-  label{
+
+  label {
     font-size: large;
-    
   }
-  input{
+  input {
     padding: 1em;
     margin: 1em;
     border-radius: 10px;
   }
-  .section-diet{
-    background-color: #81b29a ;
+  .section-diet {
+    background-color: #81b29a;
   }
 }
