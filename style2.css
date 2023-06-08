@@ -35,7 +35,7 @@ h3 {
   padding: 1em;
 } 
 
-a {
+.num{
   border-radius: 20px;
   margin: 0.3em;
   background-color: #81b29a;
@@ -58,6 +58,9 @@ button {
   padding: 0.7em;
   font-family: "Merriweather", serif;
   font-family: "Merriweather Sans", sans-serif;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 9em;
 }
 .accept {
   padding-left: 1.5em;
