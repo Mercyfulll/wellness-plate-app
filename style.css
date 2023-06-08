@@ -11,7 +11,6 @@ main {
   font-family: "Merriweather Sans", sans-serif;
   background-color: #f2cc8f;
   padding-bottom: 2em;
-  font-size: 62.5%;
 }
 html {
   font-size: 62.5%;
@@ -54,11 +53,10 @@ html {
   margin-bottom: 35px;
 }
 .navigation {
-  background-color: #f2cc8f;
   background-color: #81b29a;
   padding: 20px;
 }
-.hero-image,
+.hero-img,
 .diet-images {
   max-width: 100%;
 }
@@ -70,7 +68,9 @@ html {
 .h4-heading {
   margin-bottom: 12px;
 }
-
+.error-text.h4-heading {
+  color: red;
+}
 .diet-dishes {
   margin-top: 35px;
 }
@@ -106,6 +106,9 @@ a {
   }
   .hero-text-box {
     margin-right: 200px;
+  }
+  .hero-img {
+    max-width: revert;
   }
   .btn-hero {
     padding: 10px;
@@ -143,6 +146,10 @@ a {
   .form,
   .section-how-it-works {
     background-color: #f4f1de;
+  }
+  ul {
+    padding-top: 15px;
+    font-size: 1.8rem;
   }
   .form {
     text-align: center;

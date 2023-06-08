@@ -1,37 +1,26 @@
 const takeButton = document.querySelector(".btn-hero");
+const inputName = document.querySelector(".name");
+const inputEmail = document.querySelector(".email");
+const errorTxtEle = document.querySelector(".error-text");
+const wellnessP = wellnessPlate();
 
+// Take button should redirect User to a disclaimer screen with QR code
 
-// Take button should redirect User to a disclaimer screen with QR code 
-
-
-takeButton.addEventListener("click",function(){
-
-})
-
-function onScanSuccess(decodedText, decodedResult) {
-    // Handle on success condition with the decoded text or result.
-    // console.log(`Scan result: ${decodedText}`, decodedResult);
-    console.log(decodedText);
-    console.log(decodedResult);
-
-    if (decodedText == "plus") {
-        counter.increment();
-        counterElem.innerText = counter.value();
-        
-        html5QrcodeScanner.pause();
-
-        setTimeout(function(){
-            html5QrcodeScanner.resume();
-        }, 1000);
-
-    } else if (decodedText == "minus") {
-        counter.decrement();
-        counterElem.innerText = counter.value();
-    }
-
+/* ----- FUNCTIONS -----*/
+function testBtnFunction() {
+  wellnessP.validateName(inputName.value);
+  wellnessP.validateEmail(inputEmail.value);
+  if (!wellnessP.errorMsg()) {
+    window.location = "/html/disclaimer.html";
+  } else {
+    errorTxtEle.innerHTML = wellnessP.errorMsg();
+    setTimeout(function () {
+      errorTxtEle.innerHTML = "";
+    }, 3000);
+  }
+  inputName.value = "";
+  inputEmail.value = "";
 }
 
-var html5QrcodeScanner = new Html5QrcodeScanner(
-	"reader", { fps: 10, qrbox: 250 });
-
-html5QrcodeScanner.render(onScanSuccess);
+/* ----- EVENT LISTENERS ----- */
+takeButton.addEventListener("click", testBtnFunction);
