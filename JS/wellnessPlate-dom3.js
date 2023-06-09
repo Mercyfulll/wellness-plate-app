@@ -10,7 +10,7 @@ var score = localStorage.getItem("Scoring");
 // var score = 12;
 let currentQRCodeImg;
 if (score >= 1 && score <= 10) {
-  currentQRCodeImg = "../pdf/stress1.png";
+  currentQRCodeImg = "./pdf/stress1.png";
   document.querySelector(".qr-code-img").setAttribute("src", currentQRCodeImg);
   message.innerHTML =
     "Your stress result indicates that you have Low Stress Levels. Please scan the QR code to receive a Mental Wellness Nutrition Brochure(The Ketogenic Diet) with detailed steps on how to maintain mental health.";
