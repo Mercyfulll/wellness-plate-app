@@ -29,7 +29,10 @@
 .numbering {
   padding-bottom: 1em;
   padding-top: 1em;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 .questions {
   padding-bottom: 2em;
