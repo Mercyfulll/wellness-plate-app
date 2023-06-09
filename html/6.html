@@ -48,5 +48,17 @@
         </div>
         
     </div>
+     <script>
+    const pageNumbers = document.querySelectorAll('.num');
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+    pageNumbers.forEach((pageNumber) => {
+        const href = pageNumber.getAttribute('href').replace('../html/', '').replace('.html', '');
+        if (href === currentPage) {
+            pageNumber.classList.add('current');
+        } else if (href < currentPage) {
+            pageNumber.classList.add('visited');
+        }
+    });
+    </script>
 </body>
 </html>
