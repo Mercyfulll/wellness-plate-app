@@ -1,5 +1,5 @@
-function wellnessPlate(scoreInput){
-  let score = scoreInput || 0
+function wellnessPlate(scoreInput) {
+  let score = scoreInput || 0;
 
   function stressRadar(score) {
     if (score >= 1 && score <= 10) {
@@ -14,7 +14,7 @@ function wellnessPlate(scoreInput){
     }
   }
 
-function points(scoreinput) {
+  function points(scoreinput) {
     if (scoreinput === 1) {
       score += 1;
     }

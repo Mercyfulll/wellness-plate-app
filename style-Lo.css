@@ -35,24 +35,22 @@
   margin-top: 20px;
   border-radius: 8px;
 }
-.qr-code-display{
+.qr-code-display {
   height: 200px;
   background-color: #e07a5f;
   margin: 2em;
   padding: 1.5em;
   border-radius: 15px;
 }
-.msg{
+.msg {
   padding-top: 7em;
   font-weight: 600;
   font-size: large;
-  
 }
-.points{
+.points {
   font-size: large;
   font-size: xx-large;
   font-weight: 600;
-  
 }
 
 @media (min-width: 576px) {
@@ -114,4 +112,7 @@
   .result-container {
     max-width: 960px;
   }
+}
+.qr-code-img {
+  width: 150px;
 }
