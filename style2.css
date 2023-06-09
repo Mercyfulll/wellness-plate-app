@@ -87,6 +87,17 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+.visited {
+  background-color: #81b29a;
+  text-decoration: none;
+}
+
+.current {
+  background-color:#e07a5f;
+  color:white;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 input {
   margin: 0.5em;
