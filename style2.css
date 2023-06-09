@@ -89,3 +89,6 @@ input {
   font-size: xx-large;
   color: #f4f1de;
 }
+a {
+  text-decoration: none;
+}
