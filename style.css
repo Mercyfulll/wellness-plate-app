@@ -85,6 +85,12 @@ html {
 a {
   text-decoration: none;
 }
+.form{
+  text-align: center;
+}
+h6{
+  padding-block: 0.5em;
+}
 
 @media (min-width: 84em) {
   .section-hero {
